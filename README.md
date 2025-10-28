@@ -15,7 +15,7 @@
 
 | Game | Description | Status | Demo |
 |------|-------------|---------|------|
-| 🐍 Snake | Classic snake game with modern controls | ✅ Complete | [Play](https://icecakety.github.io/mini-games-collection/games/snake/) |
+| 🐍 Snake | Classic snake game with modern controls | ✅ Complete | [Play](https://icecakety.github.io/mini-games-collection/games/snake/index.html) |
 | 🧱 Tetris | Block stacking puzzle game | 🔄 In Progress | Coming Soon |
 | 🎴 Memory Game | Card matching memory challenge | 🔄 In Progress | Coming Soon |
 | 🐦 Flappy Bird | Side-scrolling obstacle game | 📝 Planned | - |
