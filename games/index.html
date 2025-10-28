@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icecakety's Game Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .game-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            border-color: #3498db;
+        }
+
+        .game-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .game-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .game-card p {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .play-btn {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .play-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .coming-soon {
+            background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+            cursor: not-allowed;
+        }
+
+        .coming-soon:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .author-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .logo {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🎮</div>
+            <h1>icecakety's Game Collection</h1>
+            <p class="subtitle">精心制作的经典小游戏合集 | 纯 HTML5 + CSS3 + JavaScript 实现</p>
+        </header>
+
+        <main>
+            <div class="games-grid">
+                <!-- 贪吃蛇游戏 -->
+                <div class="game-card">
+                    <div class="game-icon">🐍</div>
+                    <h3>贪吃蛇游戏</h3>
+                    <p>经典贪吃蛇游戏的现代重制版，包含流畅的动画、多种速度设置和本地最高分记录。</p>
+                    <a href="games/snake/" class="play-btn">开始游戏</a>
+                </div>
+
+                <!-- 即将推出的游戏 -->
+                <div class="game-card">
+                    <div class="game-icon">🧱</div>
+                    <h3>俄罗斯方块</h3>
+                    <p>经典的方块消除游戏，考验你的反应速度和空间想象力。</p>
+                    <button class="play-btn coming-soon">即将推出</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">🎴</div>
+                    <h3>记忆匹配</h3>
+                    <p>锻炼记忆力的卡片匹配游戏，多种难度级别和主题选择。</p>
+                    <button class="play-btn coming-soon">即将推出</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">🐦</div>
+                    <h3>像素鸟</h3>
+                    <p>挑战反应极限的飞行游戏，避开障碍物，创造最高分记录。</p>
+                    <button class="play-btn coming-soon">即将推出</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">⭕</div>
+                    <h3>井字棋</h3>
+                    <p>经典的三子棋游戏，支持双人对战和 AI 对战模式。</p>
+                    <button class="play-btn coming-soon">即将推出</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">💥</div>
+                    <h3>太空侵略者</h3>
+                    <p>复古风格的射击游戏，保卫地球免受外星人入侵。</p>
+                    <button class="play-btn coming-soon">即将推出</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="author-info">
+                <h3>关于作者</h3>
+                <p>👨‍💻 <strong>icecakety</strong> - 热爱编程的开发者</p>
+                <p>📧 邮箱: ricecake0511219@gmail.com</p>
+                <p>🌐 博客: <a href="https://icecakety.github.io" style="color: #3498db;">icecakety.github.io</a></p>
+            </div>
+            <p>&copy; 2024 icecakety's Game Collection. 所有游戏均为原创实现。</p>
+        </footer>
+    </div>
+</body>
+</html>
