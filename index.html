@@ -16,94 +16,100 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             color: #333;
+            padding: 20px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
         }
 
         header {
             text-align: center;
             margin-bottom: 50px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            font-size: 3.5em;
-            margin-bottom: 10px;
+            font-size: 4em;
+            margin-bottom: 20px;
         }
 
         h1 {
-            color: white;
-            font-size: 2.5em;
+            color: #2c3e50;
+            font-size: 3em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2em;
+            color: #7f8c8d;
+            font-size: 1.3em;
             margin-bottom: 30px;
         }
 
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-bottom: 50px;
         }
 
         .game-card {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
+            border-radius: 20px;
             padding: 30px;
             text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            border: 3px solid transparent;
         }
 
         .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
             border-color: #3498db;
         }
 
         .game-icon {
-            font-size: 4em;
-            margin-bottom: 20px;
+            font-size: 5em;
+            margin-bottom: 25px;
         }
 
         .game-card h3 {
             color: #2c3e50;
             margin-bottom: 15px;
-            font-size: 1.5em;
+            font-size: 1.8em;
         }
 
         .game-card p {
             color: #7f8c8d;
-            margin-bottom: 20px;
-            line-height: 1.5;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            font-size: 1.1em;
         }
 
         .play-btn {
             background: linear-gradient(45deg, #3498db, #2980b9);
             color: white;
             border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-size: 1.1em;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.2em;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
         }
 
         .play-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+            background: linear-gradient(45deg, #2980b9, #3498db);
         }
 
         .coming-soon {
@@ -113,22 +119,45 @@
 
         .coming-soon:hover {
             transform: none;
-            box-shadow: none;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
         }
 
         footer {
             text-align: center;
-            color: rgba(255, 255, 255, 0.8);
+            color: white;
             margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
         }
 
         .author-info {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 15px;
             margin-top: 20px;
+        }
+
+        .author-info h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .author-info p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .author-info a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .author-info a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -137,11 +166,15 @@
             }
             
             h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
             
             .logo {
-                font-size: 2.5em;
+                font-size: 3em;
+            }
+            
+            .game-card {
+                padding: 20px;
             }
         }
     </style>
@@ -161,7 +194,7 @@
                     <div class="game-icon">🐍</div>
                     <h3>贪吃蛇游戏</h3>
                     <p>经典贪吃蛇游戏的现代重制版，包含流畅的动画、多种速度设置和本地最高分记录。</p>
-                    <a href="games/snake/" class="play-btn">开始游戏</a>
+                    <a href="games/snake/index.html" class="play-btn">开始游戏</a>
                 </div>
 
                 <!-- 即将推出的游戏 -->
@@ -178,27 +211,6 @@
                     <p>锻炼记忆力的卡片匹配游戏，多种难度级别和主题选择。</p>
                     <button class="play-btn coming-soon">即将推出</button>
                 </div>
-
-                <div class="game-card">
-                    <div class="game-icon">🐦</div>
-                    <h3>像素鸟</h3>
-                    <p>挑战反应极限的飞行游戏，避开障碍物，创造最高分记录。</p>
-                    <button class="play-btn coming-soon">即将推出</button>
-                </div>
-
-                <div class="game-card">
-                    <div class="game-icon">⭕</div>
-                    <h3>井字棋</h3>
-                    <p>经典的三子棋游戏，支持双人对战和 AI 对战模式。</p>
-                    <button class="play-btn coming-soon">即将推出</button>
-                </div>
-
-                <div class="game-card">
-                    <div class="game-icon">💥</div>
-                    <h3>太空侵略者</h3>
-                    <p>复古风格的射击游戏，保卫地球免受外星人入侵。</p>
-                    <button class="play-btn coming-soon">即将推出</button>
-                </div>
             </div>
         </main>
 
@@ -207,9 +219,10 @@
                 <h3>关于作者</h3>
                 <p>👨‍💻 <strong>icecakety</strong> - 热爱编程的开发者</p>
                 <p>📧 邮箱: ricecake0511219@gmail.com</p>
-                <p>🌐 博客: <a href="https://icecakety.github.io" style="color: #3498db;">icecakety.github.io</a></p>
+                <p>🌐 博客: <a href="https://icecakety.github.io">icecakety.github.io</a></p>
+                <p>🐙 GitHub: <a href="https://github.com/icecakety">github.com/icecakety</a></p>
             </div>
-            <p>&copy; 2024 icecakety's Game Collection. 所有游戏均为原创实现。</p>
+            <p style="margin-top: 20px; color: rgba(255, 255, 255, 0.8);">&copy; 2024 icecakety's Game Collection. 所有游戏均为原创实现。</p>
         </footer>
     </div>
 </body>
